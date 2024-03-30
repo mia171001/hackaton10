@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <main class="container">
+      <h2>
+        1. Escribir una función llamada contrasenaValida que reciba un string y
+        retorne true si el string es igual a "2Fj(jjbFsuj)" o "eoZiugBf&g9". De
+        lo contrario debe retornar false.
+      </h2>
+
+      <label class="form-label" for="ex1-input-contrasena">Contraseña</label>
+      <input class="form-control" type="text" id="ex1-input-contrasena" />
+      <br />
+      <button
+        class="btn btn-success"
+        id="ex1-button-verificar"
+        onclick="calcEx1()"
+      >
+        VERIFICAR CONTRASEÑA
+      </button>
+      <br />
+      <br />
+      <h2>
+        2. Escribir una función llamada calcularImpuestos que reciba dos
+        argumentos numéricos: edad e ingresos. Si edad es igual o mayor a 18 y
+        los ingresos son iguales o mayores a 1000 debe retornar ingresos * 40%.
+        De lo contrario retornar 0.
+      </h2>
+      <label class="form-label" for="ex2-input-edad">Edad: </label>
+      <input class="form-control" type="number" id="ex2-input-edad" />
+      <label class="form-label" for="ex2-input-ingreso">Ingreso: </label>
+      <input class="form-control" type="number" id="ex2-input-ingreso" />
+      <br />
+      <button
+        class="btn btn-success"
+        id="ex2-button-impuesto"
+        onclick="calcEx2()"
+      >
+        CALCULAR IMPUESTOS
+      </button>
+      <br />
+      <br />
+      <h2>
+        3. El índice de masa corporal (IMC), o BMI por sus siglas en inglés, es
+        un valor que determina la cantidad de grasa de una persona. El BMI se
+        calcula con la siguiente fórmula: peso / altura^2 Escribir una función
+        llamada bmi que reciba dos argumentos: peso y altura, y retorne un
+        string con las siguientes posibilidades:
+      </h2>
+      <label class="form-label" for="ex3-input-peso">Peso: </label>
+      <input class="form-control" type="number" id="ex3-input-peso" />
+      <label class="form-label" for="ex3-input-altura">Altura: </label>
+      <input class="form-control" type="number" id="ex3-input-altura" />
+      <br />
+      <button class="btn btn-success" id="ex3-button-bmi" onclick="calcEx3()">
+        BMI
+      </button>
+      <br />
+      <br />
+      <h2>
+        4. Escribir una función llamada imprimirArreglo que reciba un arreglo e
+        imprima cada elemento en una línea a parte:
+      </h2>
+      <label class="form-label" for="ex4-input-arreglo"
+        >Ingresa los elementos del arreglo separados por comas:
+      </label>
+      <input class="form-control" type="text" id="ex4-input-arreglo" />
+      <br />
+      <button class="btn btn-success" id="ex4-button-arr" onclick="calcEx4()">
+        Imprimir Arreglo
+      </button>
+      <br />
+      <br />
+      <h2>
+        5. Escribe una función llamada likes que reciba un número y retorne un
+        string utilizando el formato de K para miles y M para millones. Por
+        ejemplo: 1400 se convierte en 1K 34,567 se convierte en 34K 7’456,345 se
+        convierte en 7M. Si el número es menor a 1000 se debe devolver el mismo
+        número como un string.
+      </h2>
+      <label class="form-label" for="ex5-input-like">Ingresa el número: </label>
+      <input class="form-control" type="number" id="ex5-input-like" />
+      <br />
+      <button class="btn btn-success" id="ex5-button-like" onclick="calcEx5()">
+        Calcular
+      </button>
+      <br />
+      <br />
+      <h2>
+        6. Escribir una función llamada fizzBuzz que reciba un número y retorne
+        un string de acuerdo a lo siguiente: "fizz" si el número es múltiplo de
+        3. "buzz" si el número es múltiplo de 5. "fizzbuzz" si el número es
+        múltiplo tanto de 3 como de 5. Si no cumple ninguna de las condiciones
+        anteriores debe retornar el mismo número.
+      </h2>
+      <label class="form-label" for="ex6-input-mult">Ingresa el número: </label>
+      <input class="form-control" type="number" id="ex6-input-mult" />
+      <br />
+      <button class="btn btn-success" id="ex6-button-mult" onclick="calcEx6()">
+        Calcular
+      </button>
+      <br />
+      <br />
+      <h2>
+        7.Escribir una función llamada contarRango que reciba dos números y
+        retorne cuántos números que hay entre ellos (excluyéndolos): Nota:
+        Utiliza un ciclo en tu solución. Puedes asumir que el primer número va a
+        ser menor que el segundo.
+      </h2>
+      <label class="form-label" for="ex7-input-1"
+        >Ingresa el primer número:
+      </label>
+      <input class="form-control" type="number" id="ex7-input-1" />
+      <br />
+      <label class="form-label" for="ex7-input-2"
+        >Ingresa el segundo número:
+      </label>
+      <input class="form-control" type="number" id="ex7-input-2" />
+      <br />
+      <button class="btn btn-success" id="ex7-button-cr" onclick="calcEx7()">
+        Contar Rango
+      </button>
+
+      <br />
+      <br />
+      <h2>
+        8.Escribir una función llamada sumarRango que reciba dos argumentos:
+        número inicial y número final. La función debe retornar la suma de los
+        números en ese rango (incluyéndolos). Nota: puedes asumir que el número
+        inicial va a ser menor o igual que el número final.
+      </h2>
+      <label class="form-label" for="ex8-input-1"
+        >Ingresa el primer numero:
+      </label>
+      <input class="form-control" type="number" id="ex8-input-1" />
+      <br />
+      <label class="form-label" for="ex8-input-2"
+        >Ingresa el segundo numero:
+      </label>
+      <input class="form-control" type="number" id="ex8-input-2" />
+      <br />
+      <button class="btn btn-success" id="ex8-button" onclick="calcEx8()">
+        Calcular
+      </button>
+      <br />
+      <br />
+      <h2>
+        9.Escribir una función llamada numeroDeAes que reciba un string y
+        retorne el número de veces que aparece la letra "a":
+      </h2>
+      <label class="form-label" for="ex9-input">Ingresa el texto: </label>
+      <input class="form-control" type="text" id="ex9-input" />
+      <br />
+      <button class="btn btn-success" id="ex9-button" onclick="calcEx9()">
+        Calcular
+      </button>
+      <br />
+      <br />
+      <h2>
+        10.Escribir una función llamada numeroDeCaracteres que reciba un string
+        y un caracter (un string de un caracter). La función debe retornar el
+        número de veces que aparece el caracter en el string.
+      </h2>
+      <label class="form-label" for="ex10-input-text">Ingresa el texto: </label>
+      <input class="form-control" type="text" id="ex10-input-text" />
+      <label class="form-label" for="ex10-input-c">Ingresa el caracter: </label>
+      <input class="form-control" type="text" id="ex10-input-c" />
+      <br />
+
+      <button class="btn btn-success" id="ex10-button" onclick="calcEx10()">
+        Numero de caracteres
+      </button>
+      <br />
+      <br />
+      <h2>
+        11. Escribir una función llamada sumarArreglo que reciba un arreglo de
+        números y retorne la suma de todos los elementos.
+      </h2>
+      <label class="form-label" for="ex11-input-arreglo"
+        >Ingresa los numeros del arreglo separados por comas:
+      </label>
+      <input class="form-control" type="text" id="ex11-input-arreglo" />
+      <br />
+      <button class="btn btn-success" id="ex11-button-arr" onclick="calcEx11()">
+        Sumar el arreglo
+      </button>
+      <br />
+      <br />
+      <h2>
+        12. Escribir una función llamada multiplicarArreglo que reciba un
+        arreglo de números y retorne la multiplicación de todos los elementos.
+      </h2>
+      <label class="form-label" for="ex12-input-arreglo"
+        >Ingresa los numeros del arreglo separados por comas:
+      </label>
+      <input class="form-control" type="text" id="ex12-input-arreglo" />
+      <br />
+      <button class="btn btn-success" id="ex12-button-arr" onclick="calcEx12()">
+        Multiplicar el arreglo
+      </button>
+      <br />
+      <br />
+      <h2>
+        13. Escribir una función llamada removerCeros que reciba un arreglo de
+        números y retorne un nuevo arreglo excluyendo los ceros (0).
+      </h2>
+      <label class="form-label" for="ex13-input-arreglo"
+        >Ingresa los numeros del arreglo separados por comas:
+      </label>
+      <input class="form-control" type="text" id="ex13-input-arreglo" />
+      <br />
+      <button class="btn btn-success" id="ex13-button-arr" onclick="calcEx13()">
+        Remover ceros
+      </button>
+      <br />
+      <br />
+      <h2>
+        14. Escribir una función llamada sumarArreglo que reciba tres
+        argumentos: un arreglo de números, la posición inicial y la posición
+        final. La función debe retornar la suma de todos los números dentro del
+        rango (la posición inicial y la posición final, incluyéndolas). Nota:
+        puedes asumir que la posición inicial va a ser menor o igual a la
+        posición final, y que están dentro de los límites del arreglo.
+      </h2>
+      <label class="form-label" for="ex14-input-arreglo"
+        >Ingresa los numeros del arreglo separados por comas:
+      </label>
+      <input class="form-control" type="text" id="ex14-input-arreglo" />
+      <label class="form-label" for="ex14-input-n1"
+        >Ingresa la posicion inicial:
+      </label>
+      <input class="form-control" type="number" id="ex14-input-n1" />
+      <label class="form-label" for="ex14-input-n2"
+        >Ingresa la posicion final:
+      </label>
+      <input class="form-control" type="number" id="ex14-input-n2" />
+      <br />
+      <button class="btn btn-success" id="ex14-button-arr" onclick="calcEx14()">
+        Calcular
+      </button>
+      <br />
+      <br />
+      <h2>
+        15. Escribir una función llamada transcribir que reciba un string (una
+        cadena de ADN) y retorne otro string (su complemento ARN). Los
+        complementos son los siguientes:
+      </h2>
+      <label class="form-label" for="ex15-input-trans"
+        >Ingresa la cadena de ADN:
+      </label>
+      <input class="form-control" type="text" id="ex15-input-trans" />
+      <br />
+      <button class="btn btn-success" id="ex15-button" onclick="calcEx15()">
+        Retorna su complemento
+      </button>
+      <br />
+      <br />
+      <h2>
+        16. Escribir una función llamada capitalizar que reciba un string y
+        capitalice la primera letra:
+      </h2>
+      <label class="form-label" for="ex16-input">Ingresa el texto: </label>
+      <input class="form-control" type="text" id="ex16-input" />
+      <br />
+      <button class="btn btn-success" id="ex16-button" onclick="calcEx16()">
+        Capitalizar
+      </button>
+      <br />
+      <br />
+      <h2>
+        17. Escribir una función llamada capitalizar que reciba un string y
+        capitalice la primera letra de cada palabra:
+      </h2>
+      <label class="form-label" for="ex17-input">Ingresa el texto: </label>
+      <input class="form-control" type="text" id="ex17-input" />
+      <br />
+      <button class="btn btn-success" id="ex17-button" onclick="calcEx17()">
+        Capitalizar
+      </button>
+      <br />
+      <br />
+      <h2>
+        18. Escribir una función llamada max que reciba un arreglo de números y
+        retorne el número máximo: Nota: Intentarlo hacer sin el método Math.max
+        de JavaScript.
+      </h2>
+      <label class="form-label" for="ex18-input">Ingresa el arreglo: </label>
+      <input class="form-control" type="text" id="ex18-input" />
+      <br />
+      <button class="btn btn-success" id="ex18-button" onclick="calcEx18()">
+        Numero máximo
+      </button>
+      <br />
+      <br />
+      <h2>
+        19. Escribir una función llamada min que reciba un arreglo de números y
+        retorne el número mínimo: Nota: Intentarlo hacer sin el método Math.min
+        de JavaScript.
+      </h2>
+      <label class="form-label" for="ex19-input">Ingresa el arreglo: </label>
+      <input class="form-control" type="text" id="ex19-input" />
+      <br />
+      <button class="btn btn-success" id="ex19-button" onclick="calcEx19()">
+        Numero mínimo
+      </button>
+      <br />
+      <br />
+      <h2>
+        20. Escribir una función llamada password que reciba un string y retorne
+        un nuevo string realizando los siguientes cambios: Las mayúsculas se
+        reemplazan por minúsculas. Se eliminan los espacios en blanco. Reemplaza
+        el caracter “a” por “4”. Reemplaza el caracter “e” por “3”. Reemplaza el
+        caracter “i” por “1”. Reemplaza el caracter “o” por “0”.
+      </h2>
+      <label class="form-label" for="ex20-input">Ingresa el texto: </label>
+      <input class="form-control" type="text" id="ex20-input" />
+      <br />
+      <button class="btn btn-success" id="ex20-button" onclick="calcEx20()">
+        Generar Contraseña
+      </button>
+      <br />
+      <br />
+      <h2>
+        21. Escribir una función llamada pares que reciba un arreglo de números
+        y retorne un nuevo arreglo con los números pares únicamente.
+      </h2>
+      <label class="form-label" for="ex21-input">Ingresa el arreglo: </label>
+      <input class="form-control" type="text" id="ex21-input" />
+      <br />
+      <button class="btn btn-success" id="ex21-button" onclick="calcEx21()">
+        Encontrar números pares
+      </button>
+      <br />
+      <br />
+      <h2>
+        22. Escribir una función llamada posiciones que reciba un arreglo de
+        números y retorne un nuevo arreglo con las posiciones donde se
+        encuentran números pares.
+      </h2>
+      <label class="form-label" for="ex22-input">Ingresa el arreglo: </label>
+      <input class="form-control" type="text" id="ex22-input" />
+      <br />
+      <button class="btn btn-success" id="ex22-button" onclick="calcEx22()">
+        Encontrar posiciones de números pares
+      </button>
+      <br />
+      <br />
+      <h2>
+        23. Escribir una función llamada duplicar que reciba un arreglo de
+        números y retorne un nuevo arreglo donde cada número esté multiplicado
+        por dos (2).
+      </h2>
+      <label class="form-label" for="ex23-input">Ingresa el arreglo: </label>
+      <input class="form-control" type="text" id="ex23-input" />
+      <br />
+      <button class="btn btn-success" id="ex23-button" onclick="calcEx23()">
+        Duplicar elementos del arreglo
+      </button>
+      <br />
+      <br />
+      <h2>
+        24. Escribir una función llamada empiezanConA que reciba un arreglo de
+        strings y retorne un nuevo arreglo con todas las palabras que empiecen
+        por "a" (mayúscula o minúscula).
+      </h2>
+      <label class="form-label" for="ex24-input">Ingresa el arreglo: </label>
+      <input class="form-control" type="text" id="ex24-input" />
+      <br />
+      <button class="btn btn-success" id="ex24-button" onclick="calcEx24()">
+        Buscar
+      </button>
+      <br />
+      <br />
+      <h2>
+        25. Escribir una función llamada terminanConS que reciba un arreglo de
+        strings y retorne un nuevo arreglo con todas las palabras que terminan
+        con "s" (mayúscula o minúscula).
+      </h2>
+      <label class="form-label" for="ex25-input">Ingresa el arreglo: </label>
+      <input class="form-control" type="text" id="ex25-input" />
+      <br />
+      <button class="btn btn-success" id="ex25-button" onclick="calcEx25()">
+        Buscar
+      </button>
+      <br />
+      <br />
+      <h2>
+        26. Escribir una función llamada imprimirMatriz que reciba una matriz
+        (un arreglo de arreglos) e imprima todos los elementos del arreglo.
+      </h2>
+      <label class="form-label" for="ex26-input-n1"
+        >Ingresa la matriz de numeros:
+      </label>
+      <input class="form-control" id="ex26-input-n1" type="text" />
+      <br />
+      <button class="btn btn-success" onclick="calcEx26()">
+        Imprimir numeros
+      </button>
+      <br />
+      <br />
+      <h2>
+        27. Escribir una función llamada numerosAPalabras que reciba un arreglo
+        de números (cada número en el rango de 0 a 9) y retorne un nuevo arreglo
+        convirtiendo cada número a su versión en palabras.
+      </h2>
+      <label class="form-label" for="ex27-input-n1"
+        >Ingresa el arreglo de numeros:
+      </label>
+      <input class="form-control" id="ex27-input-n1" type="text" />
+      <br />
+      <button class="btn btn-success" onclick="calcEx27()">
+        Nuevo arreglo
+      </button>
+      <br />
+      <br />
+      <!-- EJERCICIO 28 -->
+      <h2>
+        28. Escribir una función llamada palabrasANumeros que reciba un arreglo
+        de strings y retorne un nuevo arreglo traduciendo cada palabra a su
+        versión numérica (del 0 al 9). Si la palabra no es un número traducir a
+        -1.
+      </h2>
+      <label class="form-label" for="ex28-input-n1"
+        >Ingresa el arreglo de nombres de numeros:
+      </label>
+      <input class="form-control" id="ex28-input-n1" type="text" />
+      <br />
+      <button class="btn btn-success" onclick="calcEx28()">
+        Nuevo arreglo
+      </button>
+      <br />
+      <br />
+      <!-- EJERCICIO 29 -->
+      <h2>
+        29.Escribir una función llamada numAsteriscos que reciba un arreglo y
+        retorne el número de asteriscos:
+      </h2>
+      <label class="form-label" for="ex29-input-n1">Ingresa el Arreglo: </label>
+      <input class="form-control" id="ex29-input-n1" type="text" />
+      <br />
+      <button class="btn btn-success" onclick="calcEx29()">
+        Calcular asteriscos
+      </button>
+      <br />
+      <br />
+      <!-- EJERCICIO 30 -->
+      <h2>
+        30. Escribir una función llamada numAsteriscos que reciba una matriz (un
+        arreglo de arreglos) y retorne el número de asteriscos:
+      </h2>
+      <label class="form-label" for="ex30-input-n1">Ingresa la matriz: </label>
+      <input class="form-control" id="ex30-input-n1" type="text" />
+      <br />
+      <button class="btn btn-success" onclick="calcEx30()">
+        Calcular asteriscos
+      </button>
+      <br />
+      <br />
+      <!-- EJERCICIO 31 -->
+      <h2>
+        31. Escribir una función llamada distancia que reciba dos strings y
+        retorne el número de caracteres diferentes (comparando posición por
+        posición). Nota: Puedes asumir que los strings siempre tienen la misma
+        longitud. Sin embargo, si quieres agregarle más dificultad puedes pensar
+        cómo solucionarlo si un string es más largo que el otro (la diferencia
+        entre las longitudes agregaría al resultado).
+      </h2>
+      <label class="form-label" for="ex31-input-n1"
+        >Ingresa el primer string:
+      </label>
+      <input class="form-control" type="text" id="ex31-input-n1" />
+      <label class="form-label" for="ex31-input-n2"
+        >Ingresa el segundo string:
+      </label>
+      <input class="form-control" type="text" id="ex31-input-n2" />
+      <br />
+      <button class="btn btn-success" onclick="calcEx31()">
+        Calcular distancia
+      </button>
+      <p id="resultDistance"></p>
+      <br /><br />
+      <!-- <div class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+        </div> -->
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
